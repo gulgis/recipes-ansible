@@ -1,0 +1,12 @@
+---
+  - name: "Check files playbook"
+    hosts: localhost
+
+    tasks:
+      - name: "Test hosts are reacheable"
+        ping: 
+
+      - name: "Check details of files in a directory"
+        find:
+          path: ~/dev/recipes-ansible
+          file_type: file

@@ -1,0 +1,12 @@
+---
+  - name: "Simple playbook"
+    hosts: localhost
+
+    tasks:
+      - name: "Test hosts are reacheable"
+        ping: 
+
+      - name: "Install Stress on MacOS"
+        homebrew:
+          name: stress
+          state: present
